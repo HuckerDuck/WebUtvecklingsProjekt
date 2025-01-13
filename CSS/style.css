@@ -1,0 +1,127 @@
+/**========================================================================
+ *                           Navigation Meny
+ *========================================================================**/
+
+ /* Navigationsfält */
+
+ nav{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: beige;
+    padding: 10px 20px;
+
+ }
+
+ /* Navigations-listan */
+ nav ul{
+    /* Ta bort punkterna från listan */
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center;
+
+ }
+
+ /* Navigations-listansobject */
+ nav ul li{
+    /* Marginal mellan länkarna i sig */
+    margin: 0 15px;
+
+ }
+
+ /* Länkarna i navigationslistan */
+ nav ul li a{
+    /* Ta bort understrykningen som finns där som standard */
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+
+ }
+
+ /* Hoverfunktion för länkarna i sig */
+ nav ul li a:hover{
+    color: rebeccapurple;
+ }
+
+
+/**========================================================================
+ *                           HERO
+ *========================================================================**/
+
+.hero {
+    
+    background-image: url(../images/hero3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    
+    
+    
+
+}
+
+.inforubrik {
+    font-size: 7em;
+    margin: 0;
+    color: black;
+    
+    
+} 
+
+.infotext{
+    font-size: 1.2em;
+    color: aqua;
+    max-width: 600px;
+    margin:auto; 
+    line-height: 1.6;;
+
+    /* Ruta runt den */
+    border:2px solid aqua; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0,0.2);
+    text-align: center;
+    background-color: gray
+    
+    
+    
+
+}
+
+/**========================================================================
+ *                           Footer
+ *========================================================================**/
+
+footer{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: grey;
+    text-decoration: none;
+    color: black;
+}
+
+/* Footer text */
+footer p{
+    color: black
+}
+
+/* Mail länken */
+footer p a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* hover funktion för länken */
+footer p a:hover{
+    text-decoration: underline;
+    color: rebeccapurple;
+}
