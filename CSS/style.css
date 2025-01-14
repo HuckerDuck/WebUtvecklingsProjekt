@@ -1,4 +1,15 @@
 /**========================================================================
+ *                           Body
+ *========================================================================**/
+
+ .html body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+ }
+
+/**========================================================================
  *                           Navigation Meny
  *========================================================================**/
 
@@ -21,6 +32,7 @@
     color: black;
  }
 
+
  /* Navigations-listan */
  nav.big ul{
     /* Ta bort punkterna från listan */
@@ -33,14 +45,14 @@
  }
 
  /* Navigations-listansobject */
- nav ul li{
+ nav.big ul li{
     /* Marginal mellan länkarna i sig */
     margin: 0 15px;
 
  }
 
  /* Länkarna i navigationslistan */
- nav ul li a{
+ nav.big ul li a{
     /* Ta bort understrykningen som finns där som standard */
     text-decoration: none;
     color: black;
@@ -51,7 +63,7 @@
  }
 
  /* Hoverfunktion för länkarna i sig */
- nav ul li a:hover{
+ nav.big ul li a:hover{
     color: rebeccapurple;
  }
 
@@ -65,12 +77,12 @@
     background-image: url(../images/hero.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    
     text-align: center;
     
     
@@ -115,10 +127,14 @@ footer{
     background-color: grey;
     text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Footer text */
 footer p{
+    text-decoration: none;
     color: black
 }
 
@@ -126,6 +142,7 @@ footer p{
 footer p a{
     text-decoration: none;
     font-weight: bold;
+    color: black;
 }
 
 /* hover funktion för länken */
@@ -133,6 +150,32 @@ footer p a:hover{
     text-decoration: underline;
     color: rebeccapurple;
 }
+
+.LinkedIn-link-footer{
+    margin-left: 5px;
+
+}
+
+.LinkedIn-link-footer img{
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.GitHub-link-footer{
+    margin-left: 5px;
+
+}
+
+.GitHub-link-footer img{
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+
 
 /**========================================================================
  *                           Forumlär till kontaktsidan
@@ -147,6 +190,7 @@ form.formulär{
     align-items: center;
     background-color: grey;
     border-radius: 10px;
+    margin-bottom: 50px;
 
 }
 
@@ -187,12 +231,94 @@ form.formulär input[type="submit"]{
 
 /* För mobilen med en max bred på 750px */
 @media screen and (max-width: 600px) {
-    /* Gömmer navigationsmenyn */
-    nav.big{
-        display:none
+    .hamburger {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    nav.big ul {
+        display: none;
     }
 }
 
-@media screen and (min-width 480px){
+@media screen and (min-width: 700px){
+    nav.small{
+        display:none
+    }
 
 }
+
+/**========================================================================
+ *                           Ikon Meny
+ *========================================================================**/
+ .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 100px;
+    background-color: dimgray;
+    border-radius: 25px;
+    
+ }
+
+ .GitHub-link img{
+    
+    width: 100px;
+    height: 100px;
+   
+ }
+ 
+ .GitHub-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+ }
+
+ 
+ 
+ .GitHub-link h3 {
+    text-decoration: none;
+    color: black;
+ }
+
+ .GitHub-link h3:hover{
+    color: rebeccapurple;
+ }
+
+ .LinkedIn-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+ }
+ 
+
+ .LinkedIn-link img{
+
+    
+    width: 100px;
+    height: 100px;
+   
+ }
+ 
+ .LinkedIn-link h3 {
+    text-decoration: none;
+    color: black;
+
+ }
+
+ .LinkedIn-link h3:hover{
+    color: rebeccapurple;
+ }
+
+
+
+
+
+ 
+
+
