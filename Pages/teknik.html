@@ -17,17 +17,19 @@ Innehåll:
 
 =========================== END OF SECTION ===========================-->
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-   <link rel="stylesheet" href="/CSS/style.css">
+   <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-   <!-- Navigationsmeny för de andra -->
-   <nav class="big">
+   
+    <nav class="big">
       <h1 class="name">Fredrik Menot Brauer</h1>
       <ul>
          <li><a href="/index.html">Hem</a></li>
@@ -37,28 +39,48 @@ Innehåll:
       </ul>
     </nav>
 
+    <!-- Hamburgarmeny -->
     <nav class="small">
       <h1 class="name">Fredrik Menot Brauer</h1>
-      <ul>
+      <!-- Knapp för hamburgarmenyn -->
+       <button>
+         <!-- Ikon för hamburgarmenyn -->
+          <!-- Tagen från HTML Entites -->
+         &#9776;
+       </button>
+      <ul class="navmobile" id="navmobile">
          <li><a href="/index.html">Hem</a></li>
-         <li><a href="om.html">Om Mig</a></li>
-         <li><a href="teknik.html">Teknik</a></li>
-         <li><a href="kontakt.html">Kontakt</a></li>
+         <li><a href="Pages/om.html">Om Mig</a></li>
+         <li><a href="Pages/teknik.html">Teknik</a></li>
+         <li><a href="Pages/kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
+    
 
+    <!-- Huvudinnehåll -->
     <main>
-      <main>
-         <section class = "hero">
-            
-         </section>
-   
-       </main>
+      <section class = "hero">
+         <h1 class="inforubrik">Välkommen till Min Portfolie</h1>
+         <p class="infotext">
+            Jag är en blivande systemutvecklare som i nuläget studerar Programmering
+            med fokus på Java, SQL och NoSQL. 
+         <br>Utforska mina projekt och tekniska färdigheter inom webbutveckling här på min portfolio!</p>
       
+      </section>
+
     </main>
 
     <footer>
       <p>&copy 2025 Fredrik Menot Brauer | Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
+
+      <a href="https://github.com/HuckerDuck" class="GitHub-link-footer" target="_blank" aria-label="Visit my GitHub-footer">
+         
+         <img src="/images/GITHUB.png" alt="Github icon">
+      </a>
+
+      <a href="https://se.linkedin.com/in/fredrik-menot-brauer-86977121b" class="LinkedIn-link-footer" target="_blank" aria-label="Visit my GitHub">
+         <img src="/images/linkedin.png" alt="Linkedin Ikon ">
+      </a>
     </footer>
     
 </body>

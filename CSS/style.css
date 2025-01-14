@@ -1,19 +1,10 @@
-/**========================================================================
- *                           Body
- *========================================================================**/
 
- .html body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
- }
 
 /**========================================================================
  *                           Navigation Meny
  *========================================================================**/
 
- /* Navigationsfält */
+                      /* Navigationsfält för stor skärm */
  
 
  nav.big{
@@ -67,6 +58,24 @@
     color: rebeccapurple;
  }
 
+ 
+                /* Navigationsfält för liten skärm */
+
+
+/* Generell stil för hela hamburgarmenyn i sig */
+nav.small {
+    background-color: beige;
+    padding: 10px 20px; 
+    position: sticky;
+    top: 0; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
 
 /**========================================================================
  *                           HERO
@@ -82,11 +91,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    
     text-align: center;
-    
-    
-    
 
 }
 
@@ -104,6 +109,7 @@
     max-width: 600px;
     margin:auto; 
     line-height: 1.6;;
+    margin: 20px;
 
     /* Ruta runt den */
     border:2px solid aqua; 
@@ -111,9 +117,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0,0.2);
     text-align: center;
     background-color: gray
-    
-    
-    
+   
 
 }
 
@@ -209,6 +213,13 @@ form.formulär input[type="text"]{
 
 }
 
+form.formulär input[type="email"]{
+    width: 100%;
+    padding: 1;
+    font-size: 20px;;
+
+}
+
 /* För textområdet där man skriver in i */
 form.formulär textarea{
     width: 100%;
@@ -237,8 +248,15 @@ form.formulär input[type="submit"]{
         cursor: pointer;
     }
 
-    nav.big ul {
+    nav.big {
         display: none;
+
+    }
+
+    form.formulär input[type="text"],
+    form.formulär input[type="email"],
+    form.formulär textarea {
+        font-size: 16px;
     }
 }
 
@@ -256,16 +274,16 @@ form.formulär input[type="submit"]{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 20px;
     background-color: dimgray;
     border-radius: 25px;
     
  }
 
- .GitHub-link img{
-    
-    width: 100px;
-    height: 100px;
+ .container section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
    
  }
  
@@ -274,7 +292,7 @@ form.formulär input[type="submit"]{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+    margin: 10px;
  }
 
  
@@ -282,6 +300,14 @@ form.formulär input[type="submit"]{
  .GitHub-link h3 {
     text-decoration: none;
     color: black;
+    margin: 5px;
+ }
+
+ .GitHub-link img{
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
  }
 
  .GitHub-link h3:hover{
@@ -300,14 +326,17 @@ form.formulär input[type="submit"]{
  .LinkedIn-link img{
 
     
-    width: 100px;
-    height: 100px;
+    max-width: 50px;
+    max-height: 50px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
    
  }
  
  .LinkedIn-link h3 {
     text-decoration: none;
     color: black;
+    margin: 3px;
 
  }
 
