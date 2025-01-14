@@ -3,18 +3,26 @@
  *========================================================================**/
 
  /* Navigationsfält */
+ 
 
- nav{
+ nav.big{
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: beige;
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
  }
 
+ .name{
+    color: black;
+ }
+
  /* Navigations-listan */
- nav ul{
+ nav.big ul{
     /* Ta bort punkterna från listan */
     list-style: none;
     margin: 0; 
@@ -124,4 +132,67 @@ footer p a{
 footer p a:hover{
     text-decoration: underline;
     color: rebeccapurple;
+}
+
+/**========================================================================
+ *                           Forumlär till kontaktsidan
+ *========================================================================**/
+
+form.formulär{
+    max-width: 1000px;
+    padding: 20px; 
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    border-radius: 10px;
+
+}
+
+/* För själva label */
+form.formulär label{
+    font-weight: bold;
+    color: black;
+
+}
+
+/* För texten som ska skrivas in */
+form.formulär input[type="text"]{
+    width: 100%;
+    padding: 1;
+    font-size: 20px;;
+
+}
+
+/* För textområdet där man skriver in i */
+form.formulär textarea{
+    width: 100%;
+    padding: 1;
+    border: 5px;
+    font-size: 20px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+form.formulär input[type="submit"]{
+    
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    padding: 1;
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* För mobilen med en max bred på 750px */
+@media screen and (max-width: 600px) {
+    /* Gömmer navigationsmenyn */
+    nav.big{
+        display:none
+    }
+}
+
+@media screen and (min-width 480px){
+
 }
