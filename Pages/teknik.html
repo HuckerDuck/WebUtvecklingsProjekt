@@ -29,9 +29,12 @@ Innehåll:
 </head>
 <body>
    
-    <nav class="big">
-      <h1 class="name">Fredrik Menot Brauer</h1>
-      <ul>
+   <!-- Navigation Meny för Desktop -->
+   <nav class="navbarDesktop">
+      <section>
+         <h1 class="navbarDesktopTitle">Fredrik Menot Brauer</h1>
+      </section>
+      <ul class="navbarDesktopList" id="navbarDesktopList">
          <li><a href="/index.html">Hem</a></li>
          <li><a href="om.html">Om Mig</a></li>
          <li><a href="teknik.html">Teknik</a></li>
@@ -39,49 +42,152 @@ Innehåll:
       </ul>
     </nav>
 
-    <!-- Hamburgarmeny -->
-    <nav class="small">
-      <h1 class="name">Fredrik Menot Brauer</h1>
+    <!-- NavigationsMeny för Mobilen -->
+    <nav class="navbarMobile">
+      <header class="navbarMobileHeader">
+         <section>
+            <h1 class="navbarMobileTitle">Fredrik Menot Brauer</h1>
+         </section>
+         
       <!-- Knapp för hamburgarmenyn -->
-       <button>
+       <button class="hamburger" id="hamburger" type="button" aria-label="Öppna navigerinsmenyn">
          <!-- Ikon för hamburgarmenyn -->
           <!-- Tagen från HTML Entites -->
          &#9776;
        </button>
-      <ul class="navmobile" id="navmobile">
+      </header>
+      
+      <ul class="navbarMobileList" id="navbarMobileList">
          <li><a href="/index.html">Hem</a></li>
-         <li><a href="Pages/om.html">Om Mig</a></li>
-         <li><a href="Pages/teknik.html">Teknik</a></li>
-         <li><a href="Pages/kontakt.html">Kontakt</a></li>
+         <li><a href="om.html">Om Mig</a></li>
+         <li><a href="teknik.html">Teknik</a></li>
+         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
-    
 
-    <!-- Huvudinnehåll -->
     <main>
-      <section class = "hero">
-         <h1 class="inforubrik">Välkommen till Min Portfolie</h1>
-         <p class="infotext">
-            Jag är en blivande systemutvecklare som i nuläget studerar Programmering
-            med fokus på Java, SQL och NoSQL. 
-         <br>Utforska mina projekt och tekniska färdigheter inom webbutveckling här på min portfolio!</p>
       
-      </section>
-
-    </main>
-
-    <footer>
-      <p>&copy 2025 Fredrik Menot Brauer | Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
-
-      <a href="https://github.com/HuckerDuck" class="GitHub-link-footer" target="_blank" aria-label="Visit my GitHub-footer">
+      <section class="hero">
          
-         <img src="/images/GITHUB.png" alt="Github icon">
-      </a>
+         <section class="articles-section">
+            
+            <!-- Artikel 1 -->
+             <article class="article">
+               <!-- Figure - Semantiskt HTML element för att gruppera visuellt innehåll -->
+               <figure>
+                  <a href="https://github.com/HuckerDuck/project1" target="_blank" aria-label="Visit GitHub Project 1">
+                     <img src="/images/Article 1 - Java.png" alt="Exempel på Objekterad Java" class="article-image">
+                 </a>
+               </figure>
+                 
+                 <h3>Objekterad Programming</h3>
+                 <p>I min utbildning har jag fått en solid grund i objektorienterad programmering med Java. 
+                  Jag har lärt mig använda begrepp som klasser, objekt, arv och polymorfism för att bygga 
+                  flexibla och återanvändbara applikationer. Med en kombination av teori och praktiska övningar 
+                  har jag utvecklat applikationer som implementerar moderna designprinciper.</p>
+             </article>
 
-      <a href="https://se.linkedin.com/in/fredrik-menot-brauer-86977121b" class="LinkedIn-link-footer" target="_blank" aria-label="Visit my GitHub">
-         <img src="/images/linkedin.png" alt="Linkedin Ikon ">
-      </a>
-    </footer>
-    
+     
+             <!-- Artikel 2 -->
+
+             <article class="article">
+               <figure>
+                  <a href="https://github.com/HuckerDuck/project2" target="_blank" aria-label="Visit GitHub Project 2">
+                     <img src="/images/Article 2 - Relationdatabase.jpg" alt="Project 2" class="article-image">
+                 </a>
+               </figure>
+                 
+                 <h3>Relationsdatabaser</h3>
+                 <p>Jag har omfattande erfarenhet av att designa, optimera och integrera relationsdatabaser med applikationer. Genom att använda SQL och JDBC har jag 
+                  utvecklat lösningar som möjliggör effektiv datalagring och åtkomst. Jag är också van vid att analysera och normalisera databasstrukturer för att 
+                  säkerställa hög prestanda och dataintegritet.</p>
+             </article>
+
+            <!-- Artikel 3 -->
+            <article class="article">
+               <figure>
+                  <a href="https://github.com/HuckerDuck/project2" target="_blank" aria-label="Visit GitHub Project 2">
+                     <img src="/images/Article 3 - Testing.png" alt="Testning" class="article-image">
+                 </a>
+               </figure>
+               
+               <h3>Testning av Projekt</h3>
+               <p>Att leverera pålitlig mjukvara kräver robust testning. Med JUnit har jag utvecklat enhetstester som validerar funktionalitet och säkerställer att applikationer 
+                  presterar som förväntat. Jag har implementerat tester för att snabbt identifiera och lösa potentiella problem, vilket förbättrar både stabiliteten och kvaliteten i 
+                  mina projekt.</p>
+           </article>
+
+           <!-- Artikel 4 -->
+           <article class="article">
+            <figure>
+               <a href="https://github.com/HuckerDuck/project2" target="_blank" aria-label="Visit GitHub Project 2">
+                  <img src="/images/Article 4 - Website Development.jpeg" alt="Testning" class="article-image">
+              </a>
+            </figure>
+
+            
+            <h3>Skapande av responsiva och användarvänliga webbsidor</h3>
+            <p>Att leverera pålitlig mjukvara kräver robust testning. Med JUnit har jag utvecklat enhetstester som validerar funktionalitet och säkerställer att applikationer 
+               presterar som förväntat. Jag har implementerat tester för att snabbt identifiera och lösa potentiella problem, vilket förbättrar både stabiliteten och kvaliteten i 
+               mina projekt.</p>
+            </article>
+
+            <!-- Artikel 5 -->
+            <article class="article">
+            <figure>
+            <a href="https://github.com/HuckerDuck/project2" target="_blank" aria-label="Visit GitHub Project 2">
+               <img src="/images/Article 5 - Secure by Design.png" alt="Testning" class="article-image">
+             </a>
+            </figure>
+         
+            <h3>Secure by Design</h3>
+            <p>Att leverera pålitlig mjukvara kräver robust testning. Med JUnit har jag utvecklat enhetstester som validerar funktionalitet och säkerställer att applikationer 
+            presterar som förväntat. Jag har implementerat tester för att snabbt identifiera och lösa potentiella problem, vilket förbättrar både stabiliteten och kvaliteten i 
+            mina projekt.</p>
+             </article>
+
+     
+     <article class="article">
+      <figure>
+         <a href="https://github.com/HuckerDuck/project2" target="_blank" aria-label="Visit GitHub Project 2">
+            <img src="/images/Article 3 - Testing.png" alt="Testning" class="article-image">
+        </a>
+      </figure>
+      
+      <h3>Testning av Projekt</h3>
+      <p>Att leverera pålitlig mjukvara kräver robust testning. Med JUnit har jag utvecklat enhetstester som validerar funktionalitet och säkerställer att applikationer 
+         presterar som förväntat. Jag har implementerat tester för att snabbt identifiera och lösa potentiella problem, vilket förbättrar både stabiliteten och kvaliteten i 
+         mina projekt.</p>
+ 
+      </article>
+
+        
+         
+            <!-- Slutet av Sektion för artiklar -->
+         </section>
+
+         <!-- Slutet av sektion för heron -->
+      </section>
+      
+      <!-- Slutat av main sektionen -->
+
+   </section>   
+ </main>
+
+<!-- Footer -->
+ <footer>
+   <p>&copy; 2025 Fredrik Menot Brauer <br><br> Telefon 076-097 63 60 <br>Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
+
+   <a href="https://github.com/HuckerDuck" class="GitHub-link-footer" target="_blank" aria-label="Visit my GitHub-footer">
+      
+      <img src="/images/GITHUB.png" alt="Github icon">
+   </a>
+
+   <a href="https://se.linkedin.com/in/fredrik-menot-brauer-86977121b" class="LinkedIn-link-footer" target="_blank" aria-label="Visit my GitHub">
+      <img src="/images/linkedin.png" alt="Linkedin Ikon ">
+   </a>
+ </footer>
+      
+ <script src="/js/scrips.js"></script>
 </body>
 </html>

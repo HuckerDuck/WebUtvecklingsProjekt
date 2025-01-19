@@ -1,4 +1,12 @@
-
+/* Ser till att hela sidan används utan vita delar runt */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+   
+    
+}
 
 /**========================================================================
  *                           Navigation Meny
@@ -7,74 +15,129 @@
                       /* Navigationsfält för stor skärm */
  
 
- nav.big{
-    position: sticky;
+ .navbarDesktop{
+    position: relative;
     top: 0;
-    z-index: 10;
+    left: 0;
+    right: 0;
     background-color: beige;
-    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
+    justify-content: space-between;
+    padding: 0 20px;
  }
 
- .name{
-    color: black;
+ .navbarDesktopTitle{
+    font-weight: bold;
+    font-size: 1.5em;
  }
 
 
  /* Navigations-listan */
- nav.big ul{
+ .navbarDesktopList{
     /* Ta bort punkterna från listan */
     list-style: none;
     margin: 0; 
     padding: 0; 
     display: flex; 
-    justify-content: center;
-
- }
-
- /* Navigations-listansobject */
- nav.big ul li{
-    /* Marginal mellan länkarna i sig */
-    margin: 0 15px;
+    /* Mellanrummet mellan länkarna */
+    gap: 50px;
 
  }
 
  /* Länkarna i navigationslistan */
- nav.big ul li a{
+ .navbarDesktopList li a{
     /* Ta bort understrykningen som finns där som standard */
     text-decoration: none;
     color: black;
     font-size: 1.2em;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 
  }
 
  /* Hoverfunktion för länkarna i sig */
- nav.big ul li a:hover{
+ .navbarDesktopList li a:hover{
     color: rebeccapurple;
  }
 
- 
-                /* Navigationsfält för liten skärm */
+ .navbarDesktop .namebig{
+    display: flex;
+    font-weight: bold;
+    color: black;
+    font-size: 1.5em;
+    
+
+ }
 
 
 /* Generell stil för hela hamburgarmenyn i sig */
-nav.small {
+
+.navbarMobile {
     background-color: beige;
     padding: 10px 20px; 
-    position: sticky;
-    top: 0; 
-    z-index: 10;
+    position: relative;
+    top: 0px; 
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.navbarMobileHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* namnet i mobil navigationmenyn */
+.navbarMobileTitle{
+    font-size:1.5em;
+    font-weight: bolder;
+    color: black
+}
+
+.navbarMobileList{
+    list-style: none;
+    /* Gömmer displayen som standard tills man trycker */
+    display: none; 
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Texten i listan */
+
+.navbarMobileList li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    transition: color 0.5s ease;
+}
+
+.navbarMobileList li a:hover{
+    color: rebeccapurple;
 }
 
 
+.navbarMobileList.active{
+    display: flex; /* Ser till att menyn visas */
+    flex-direction: column;
+}
+
+/* Hamburgarknapp */
+.hamburger{
+
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: black;
+    margin-left: auto;
+}
 
 
 /**========================================================================
@@ -83,22 +146,34 @@ nav.small {
 
 .hero {
     
+    
     background-image: url(../images/hero.jpg);
     background-size: cover;
     background-position: center;
-    height: 100%;
+    
+    /* Flexinställningar */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
 
 }
 
+/**========================================================================
+ *                           InformationText
+ *========================================================================**/
+
 .inforubrik {
     font-size: 7em;
     margin: 0;
     color: black;
+
+    border:2px solid aqua; 
+    border-radius: 15px; 
+    text-align: center;
+    background-color: gray
+   
     
     
 } 
@@ -114,18 +189,304 @@ nav.small {
     /* Ruta runt den */
     border:2px solid aqua; 
     border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0,0.2);
     text-align: center;
     background-color: gray
-   
-
 }
 
 /**========================================================================
+ *                           Artiklarna i Tekniska Sidan
+ *========================================================================**/
+
+ /* Hela artikelsektionen i sin helhet */
+ .articles-section{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    
+ }
+
+ /* Själva artikeln */
+ .article{
+    flex: 1 1 calc(50% - 40px);
+    max-width: 500px;
+    background-color: gray; 
+    padding: 15px;
+    margin: 30px;
+    border-radius: 30px;
+ }
+
+ .article:hover{
+    
+ }
+
+ /* Bilden i artikel */
+ .article img{
+    width: 100%;
+
+    /* Förhållandet 16:9 för bilderna */
+    aspect-ratio: 16 /9;
+    border-radius: 10px;
+    margin: 10px;
+ }
+
+
+ /**========================================================================
+ *                           Om mig sektionen
+ *========================================================================**/
+
+ /* Sektionen i sin helhet */
+
+ .aboutMe-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    border-radius: 30px;
+    margin: 30px;
+    
+    padding: 20px;
+    gap: 20px
+
+ }
+
+ .aboutMe-section figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+ }
+
+ .aboutMe-section img{
+    width: 300px;
+    height: 400px;
+    border: 50px;
+    object-fit: cover;
+ }
+
+/* Sektionen för texten */
+.aboutMe-section article{
+    max-width: 500px;
+}
+
+/* Rubriken */
+.aboutMe-section header h2{
+    font-weight: bolder;
+    font-size: 2.5em;
+
+}
+
+/* Brödtexten */
+.aboutMe-section p{
+    font-size: 1.5em;
+    
+}
+ 
+ 
+ 
+
+
+/**========================================================================
+ *                           Forumlär till kontaktsidan
+ *========================================================================**/
+
+form.formulär{
+    max-width: 1000px;
+    padding: 20px; 
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+}
+
+/* För själva label */
+form.formulär label{
+    font-weight: bold;
+    color: black;
+
+}
+
+form.formulär input[type="text"],
+form.formulär input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+/* För textområdet där man skriver in i */
+form.formulär textarea{
+    width: 100%;
+    padding: 10px;
+    border: 5px;
+    border-radius: 7px;
+    font-size: 20px;
+    min-height: 100px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+form.formulär input[type="submit"]{
+    
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    padding: 1px;
+    margin: 10px;
+    font-size: 20px;
+    
+}
+
+form.formulär textarea:focus,
+form.formulär input[type="text"]:focus,
+form.formulär input[type="email"]:focus,
+form.formulär input[type="submit"]:focus{
+    border-color: rebeccapurple; /* Ändrar kantfärg vid fokus */
+    outline: none; /* Tar bort standardblå "outline" */
+    box-shadow: 0 0 5px rebeccapurple; /* Lägger till en subtil skugga */
+}
+
+/**========================================================================
+ *                           Ikon Meny
+ *========================================================================**/
+ .socialMedia{
+    text-align: center;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 30px;
+    margin: 30px;
+ }
+
+ /* Texten */
+ .socialMedia h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+ }
+
+ /* LänkListan*/
+ .socialMedia ul{
+    list-style: none;
+    
+    /* För flex display */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+ }
+
+ /* Texten i LänkListan */
+ .socialMedia ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.5s ease;
+    gap:10px;
+
+    /* Flexdisplay */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .socialMedia ul li a:hover{
+    color: rebeccapurple;
+ }
+
+ /* Själva ikonerna */
+ .socialMedia ul li img{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s ease;
+ }
+ 
+ .socialMedia ul li img:hover{
+    transform: scale(1.5);
+ }
+
+ .socialMedia ul li a span{
+    font-size: 1.3em;
+    margin-top: 2px;
+    text-align: center;
+ }
+
+
+ /**========================================================================
+ *                           Inställningar för dator / Mobil
+ *========================================================================**/
+ 
+/* För mobilen med en max bred på 750px */
+@media screen and (max-width: 770px) {
+    .hero{
+        height: auto;
+        padding:20px;
+    }
+    
+    .infotext{
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    form.formulär{
+        max-width: 95%;
+        padding: 10px
+        
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+    
+    .navbarDesktop{
+        display: none;
+    }
+
+    .navbarMobile{
+        display: flex;
+    }
+
+
+    /* Om mig */
+    .aboutMe-section header h2{
+        font-weight: bolder;
+        font-size: 2em;
+    
+    }
+    
+    /* Brödtexten */
+    .aboutMe-section p{
+        font-size: 1em;
+        
+    }
+
+    
+}
+
+/* Stora skärmar */
+@media screen and (min-width: 771px){
+    .navbarMobile{
+        display:none
+    }
+
+}
+
+
+ /**========================================================================
  *                           Footer
  *========================================================================**/
 
 footer{
+    position: relative;
     text-align: center;
     padding: 10px 20px;
     background-color: grey;
@@ -154,12 +515,12 @@ footer p a:hover{
     text-decoration: underline;
     color: rebeccapurple;
 }
-
+.GitHub-link-footer,
 .LinkedIn-link-footer{
     margin-left: 5px;
 
 }
-
+.GitHub-link-footer img,
 .LinkedIn-link-footer img{
     max-width: 50px;
     max-height: 50px;
@@ -167,183 +528,12 @@ footer p a:hover{
     object-fit: contain;
 }
 
-.GitHub-link-footer{
-    margin-left: 5px;
-
-}
-
-.GitHub-link-footer img{
-    max-width: 50px;
-    max-height: 50px;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-}
-
-
-
-/**========================================================================
- *                           Forumlär till kontaktsidan
- *========================================================================**/
-
-form.formulär{
-    max-width: 1000px;
-    padding: 20px; 
-    margin: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: grey;
-    border-radius: 10px;
-    margin-bottom: 50px;
-
-}
-
-/* För själva label */
-form.formulär label{
-    font-weight: bold;
-    color: black;
-
-}
-
-/* För texten som ska skrivas in */
-form.formulär input[type="text"]{
-    width: 100%;
-    padding: 1;
-    font-size: 20px;;
-
-}
-
-form.formulär input[type="email"]{
-    width: 100%;
-    padding: 1;
-    font-size: 20px;;
-
-}
-
-/* För textområdet där man skriver in i */
-form.formulär textarea{
-    width: 100%;
-    padding: 1;
-    border: 5px;
-    font-size: 20px;
-    min-height: 100px;
-    resize: vertical;
-}
-
-form.formulär input[type="submit"]{
-    
-    display: flex;
-    align-items: center;
-    max-width: 200px;
-    padding: 1;
-    margin: 10px;
-    font-size: 20px;
-}
-
-/* För mobilen med en max bred på 750px */
-@media screen and (max-width: 600px) {
-    .hamburger {
-        display: block;
-        font-size: 2em;
-        cursor: pointer;
-    }
-
-    nav.big {
-        display: none;
-
-    }
-
-    form.formulär input[type="text"],
-    form.formulär input[type="email"],
-    form.formulär textarea {
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 700px){
-    nav.small{
-        display:none
-    }
-
-}
-
-/**========================================================================
- *                           Ikon Meny
- *========================================================================**/
- .container{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 20px;
-    background-color: dimgray;
-    border-radius: 25px;
-    
- }
-
- .container section{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-   
- }
- 
- .GitHub-link{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
- }
-
- 
- 
- .GitHub-link h3 {
+footer a{
     text-decoration: none;
     color: black;
-    margin: 5px;
- }
-
- .GitHub-link img{
-    max-width: 50px;
-    max-height: 50px;
-    aspect-ratio: 1/1;
-    object-fit: contain;
- }
-
- .GitHub-link h3:hover{
-    color: rebeccapurple;
- }
-
- .LinkedIn-link{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
- }
- 
-
- .LinkedIn-link img{
-
-    
-    max-width: 50px;
-    max-height: 50px;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-   
- }
- 
- .LinkedIn-link h3 {
-    text-decoration: none;
-    color: black;
-    margin: 3px;
-
- }
-
- .LinkedIn-link h3:hover{
-    color: rebeccapurple;
- }
-
+    transition: 0.5s ease;
+    font-weight: normal;
+}
 
 
 

@@ -25,9 +25,12 @@ Innehåll:
 </head>
 <body>
    <!-- Navigationsmeny för de andra -->
-   <nav class="big">
-      <h1 class="name">Fredrik Menot Brauer</h1>
-      <ul>
+   <!-- Navigation Meny för Desktop -->
+   <nav class="navbarDesktop">
+      <section>
+         <h1 class="navbarDesktopTitle">Fredrik Menot Brauer</h1>
+      </section>
+      <ul class="navbarDesktopList" id="navbarDesktopList">
          <li><a href="/index.html">Hem</a></li>
          <li><a href="om.html">Om Mig</a></li>
          <li><a href="teknik.html">Teknik</a></li>
@@ -35,39 +38,51 @@ Innehåll:
       </ul>
     </nav>
 
-    <nav class="small">
-      <h1 class="name">Fredrik Menot Brauer</h1>
-      <ul>
+    <!-- NavigationsMeny för Mobilen -->
+    <nav class="navbarMobile">
+      <header class="navbarMobileHeader">
+         <section>
+            <h1 class="navbarMobileTitle">Fredrik Menot Brauer</h1>
+         </section>
+         
+      <!-- Knapp för hamburgarmenyn -->
+       <button class="hamburger" id="hamburger" type="button" aria-label="Öppna navigerinsmenyn">
+         <!-- Ikon för hamburgarmenyn -->
+          <!-- Tagen från HTML Entites -->
+         &#9776;
+       </button>
+      </header>
+      
+      <ul class="navbarMobileList" id="navbarMobileList">
          <li><a href="/index.html">Hem</a></li>
          <li><a href="om.html">Om Mig</a></li>
          <li><a href="teknik.html">Teknik</a></li>
          <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
-
     <main>
       
          <section class = "hero">
 
-            <div class="container">
-               <section>
+            <div class="socialMedia">
+               <h2>Följ mig på sociala medier</h2>
+               <ul>
+                   <li>
+                       <a href="https://github.com/HuckerDuck" class="GitHub-link" target="_blank" aria-label="Besök min GitHub">
+                           <img src="/images/GITHUB.png" alt="GitHub ikon">
+                           <span>GitHub</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="https://se.linkedin.com/in/fredrik-menot-brauer-86977121b" class="LinkedIn-link" target="_blank" aria-label="Besök min LinkedIn">
+                           <img src="/images/linkedin.png" alt="LinkedIn ikon">
+                           <span>LinkedIn</span>
+                       </a>
+                   </li>
+               </ul>
+           </div> 
 
-                  <a href="https://github.com/HuckerDuck" class="GitHub-link" target="_blank" aria-label="Visit my GitHub">
-         
-                     <img src="/images/GITHUB.png" alt="Github icon">
-                     <h3>GitHub</h3>
-                  </a>
-   
-                  <a href="https://se.linkedin.com/in/fredrik-menot-brauer-86977121b" class="LinkedIn-link" target="_blank" aria-label="Visit my GitHub">
-            
-                     <img src="/images/linkedin.png" alt="Linkedin Ikon ">
-                     <h3>LinkedIn</h3>
-                  </a>
-               </section>
-             </div>   
-      
-
-         <section>
+           <section>
             <h1> Vid eventuella frågor eller funderingar, ta gärna kontakt med mig!
             </h1>
          </section>
@@ -95,18 +110,16 @@ Innehåll:
             <input type="submit" value="Skicka">
 
          </form>
-
-         
-         
-   
-
       
+   
+         </section>
     </main>
 
     
 
+    <!-- Footer -->
     <footer>
-      <p>&copy 2025 Fredrik Menot Brauer | Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
+      <p>&copy; 2025 Fredrik Menot Brauer <br><br> Telefon 076-097 63 60 <br>Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
 
       <a href="https://github.com/HuckerDuck" class="GitHub-link-footer" target="_blank" aria-label="Visit my GitHub-footer">
          
@@ -118,6 +131,6 @@ Innehåll:
       </a>
     </footer>
  
-
+    <script src="/js/scrips.js"></script>
 </body>
 </html>

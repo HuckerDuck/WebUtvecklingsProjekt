@@ -1,7 +1,6 @@
-// Function funktion och parameter 
-function greet(name){
-    return "Hej, "
-}
+const hamburger = document.getElementById("hamburger");
+const navsmall = document.getElementById("navbarMobileList");
 
-// Arrow funcion
-const greeting = (name, name2 ) => 'Hej, $'
+hamburger.addEventListener("click", () => {
+    navbarMobileList.classList.toggle("active");
+});

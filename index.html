@@ -26,20 +26,27 @@ Sida: Första sidan (intex)
 </head>
 <body>
    
-    <nav class="big">
-      <h1 class="name">Fredrik Menot Brauer</h1>
-      <ul>
+    <!-- Desktop NavigationMeny -->
+    <!-- Navigation Meny för Desktop -->
+   <nav class="navbarDesktop">
+      <section>
+         <h1 class="navbarDesktopTitle">Fredrik Menot Brauer</h1>
+      </section>
+      <ul class="navbarDesktopList" id="navbarDesktopList">
          <li><a href="index.html">Hem</a></li>
-         <li><a href="Pages/om.html">Om Mig</a></li>
-         <li><a href="Pages/teknik.html">Teknik</a></li>
-         <li><a href="Pages/kontakt.html">Kontakt</a></li>
+         <li><a href="/Pages/om.html">Om Mig</a></li>
+         <li><a href="/Pages/teknik.html">Teknik</a></li>
+         <li><a href="/Pages/kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
 
-    <!-- Hamburgarmeny -->
-    <nav class="small">
-      <header>
-         <h1 class="name">Fredrik Menot Brauer</h1>
+    <!-- NavigationsMeny för Mobilen -->
+    <nav class="navbarMobile">
+      <header class="navbarMobileHeader">
+         <section>
+            <h1 class="navbarMobileTitle">Fredrik Menot Brauer</h1>
+         </section>
+         
       <!-- Knapp för hamburgarmenyn -->
        <button class="hamburger" id="hamburger" type="button" aria-label="Öppna navigerinsmenyn">
          <!-- Ikon för hamburgarmenyn -->
@@ -48,11 +55,11 @@ Sida: Första sidan (intex)
        </button>
       </header>
       
-      <ul class="navmobile" id="navmobile">
+      <ul class="navbarMobileList" id="navbarMobileList">
          <li><a href="index.html">Hem</a></li>
-         <li><a href="Pages/om.html">Om Mig</a></li>
-         <li><a href="Pages/teknik.html">Teknik</a></li>
-         <li><a href="Pages/kontakt.html">Kontakt</a></li>
+         <li><a href="/Pages/om.html">Om Mig</a></li>
+         <li><a href="/Pages/teknik.html">Teknik</a></li>
+         <li><a href="/Pages/kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
     
@@ -65,13 +72,22 @@ Sida: Första sidan (intex)
             Jag är en blivande systemutvecklare som i nuläget studerar Programmering
             med fokus på Java, SQL och NoSQL. 
          <br>Utforska mina projekt och tekniska färdigheter inom webbutveckling här på min portfolio!</p>
-      
+
+         <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Valid CSS!" />
+                </a>
+            </p>
       </section>
 
+   
     </main>
 
+    <!-- Footer -->
     <footer>
-      <p>&copy 2025 Fredrik Menot Brauer | Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
+      <p>&copy; 2025 Fredrik Menot Brauer <br><br> Telefon 076-097 63 60 <br>Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
 
       <a href="https://github.com/HuckerDuck" class="GitHub-link-footer" target="_blank" aria-label="Visit my GitHub-footer">
          
@@ -83,5 +99,6 @@ Sida: Första sidan (intex)
       </a>
     </footer>
     
+    <script src="/js/scrips.js"></script>
 </body>
 </html>
