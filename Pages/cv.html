@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+   <link rel="stylesheet" href="/CSS/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Navigationsmeny för de andra -->
+   <!-- Navigation Meny för Desktop -->
+   <nav class="navbarDesktop">
+      <section>
+         <h2 class="navbarDesktopTitle">Fredrik Menot Brauer</h2>
+      </section>
+      <ul class="navbarDesktopList" id="navbarDesktopList">
+        <li><a href="/index.html">Hem</a></li>
+        <li><a href="om.html">Om Mig</a></li>
+        <li><a href="teknik.html">Teknik</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- NavigationsMeny för Mobilen -->
+    <nav class="navbarMobile">
+      <header class="navbarMobileHeader">
+         <section>
+            <h2 class="navbarMobileTitle">Fredrik Menot Brauer</h2>
+         </section>
+         
+      <!-- Knapp för hamburgarmenyn -->
+       <button class="hamburger" id="hamburger" type="button" aria-label="Öppna navigerinsmenyn">
+         <!-- Ikon för hamburgarmenyn -->
+          <!-- Tagen från HTML Entites -->
+         &#9776;
+       </button>
+      </header>
+      
+      <ul class="navbarMobileList" id="navbarMobileList">
+        <li><a href="/index.html">Hem</a></li>
+        <li><a href="om.html">Om Mig</a></li>
+        <li><a href="teknik.html">Teknik</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <main>
+      
+         <section class = "hero">
+          
+            <section class="cv-sektion">
+              <h2>Mitt CV</h2>
+                <figure>
+                    <img src="/images/AboutMePic.jpg" 
+                    srcset="/images/aboutMePicMobile.jpg 480w, /images/aboutMePic.jpg 1200w" 
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Min Porträttbild">
+                 </figure>
+                 <!-- Arbetserfarenhet -->
+                <section class ="erfarenhet">
+                    <h3>Arbetserfarenhet</h3>
+                    <article>
+                        <h4>Förskollärare <br>Sköndal</h4>
+                        <p>2023 -> Nuvarande</p>
+                        <p>Ansvarar för barns utveckling och lärande genom barnens intresse med hjälp av systematiskt kvalitetsarbete</p>
+
+                    </article>
+
+                    <article>
+                        <h4>Förskollärare <br>Gubbängens Förskolor</h4>
+                        <p>2018 -> 2022 </p>
+                        <p>Var ansvarig för olika grupper av avdelningar med 15 barn och två andra kollegor där fokuset har
+                            varit att jobba utifrån ett specifikt fokus kring ett projekt och mycket arbete utifrån smågrupper.
+                            Jobbat med både yngre och äldre barn under min tid i Gubbängen. Oavsett ålder så har en hel
+                            del fokus lagts på att få en bra och fungerande verksamhet med ett tydligt tänk, bra rutiner och
+                            en miljö där kollegor, barn och vårdnadshavare känner sig välkomna.</p>
+
+                    </article>
+
+                    <article>
+                        <h4>Förskollärare <br>Alexanderskolan</h4>
+                        <p>2017-2018</p>
+                        <p>Ansvarade för en storbarnsgrupp och jobbade mycket i projektform utifrån ett valt fokus och
+                            barnens intresse. Mycket dokumentation och systematiskt kvalitetsarbete för att synliggöra
+                            kvalité och skapa en likvärdighet.</p>
+
+                    </article>
+                </section>
+
+                <!-- Utbildning -->
+                <section class="utbildning">
+                    <h3>Utbildning</h3>
+                    <article>
+
+                        <h4>STI - Javautvecklare</h4>
+                        <p>2024-2026</p>
+                        <p>Studerar Javautveckling med fokus på objektorienterad programmering, databashantering och systemutveckling för moderna IT-lösningar</p>
+                    </article>
+
+                    <article>
+
+                        <h4>Stockholm Universitet - Förskollärare</h4>
+                        <p>2014-2017</p>
+                        <p>Utbildades i pedagogiska strategier, barnpsykologi och lekinriktad undervisning för att främja lärande och social utveckling hos barn.</p>
+                    </article>
+
+                </section>
+
+                <!-- Kunskaper -->
+                 <section class="kunskaper">
+                    <h3>Kunskaper</h3>
+                    <ul>
+                        <li>Java och C++</li>
+                        <li>HTML5, CSS & JavaScript</li>
+                        <li>Databashantering (MySQL & AWS)</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                 </section>
+            </section>
+         </section>
+    </main>
+
+    
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Fredrik Menot Brauer <br><br> Telefon 076-097 63 60 <br>Mail: <a href="mailto:frmb1@hotmail.com">Frmb1@hotmail.com</a></p>
+
+      <a href="https://github.com/HuckerDuck" class="GitHub-link-footer" target="_blank" aria-label="Visit my GitHub-footer">
+         
+         <img src="/images/GITHUB.png" alt="Github icon">
+      </a>
+
+      <a href="https://se.linkedin.com/in/fredrik-menot-brauer-86977121b" class="LinkedIn-link-footer" target="_blank" aria-label="Visit my GitHub">
+         <img src="/images/linkedin.png" alt="Linkedin Ikon ">
+      </a>
+    </footer>
+ 
+    <script src="/js/scrips.js"></script>
+</body>
+</html>
