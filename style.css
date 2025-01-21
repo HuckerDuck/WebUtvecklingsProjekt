@@ -27,7 +27,7 @@ main {
                       /* Navigationsfält för stor skärm */
 
  .navbarDesktop{
-    position: relative;
+    position: static;
     top: 0;
     left: 0;
     right: 0;
@@ -139,7 +139,6 @@ main {
 
 /* Hamburgarknapp */
 .hamburger{
-
     font-size: 2em;
     background: none;
     border: none;
@@ -161,7 +160,6 @@ main {
     min-height: calc(100vh - 100px);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -570,17 +568,29 @@ form.formulär input[type="submit"]:focus{
     .navbarMobile{
         display: flex;
     }
+
+    .article{
+        max-width: 70%;
+    }
     
 
     /* Sekonen runt bilden */
     .article-image {
-        width: 100%;
+        max-width: 70%;
         border-radius: 20px;
     }
 
     .article figure {
-        width: auto; /* Säkerställer att figuren inte begränsar bilden */
+        max-width: 70%; 
         margin: 0 auto;
+    }
+
+    .article img {
+        width: 250px;
+        aspect-ratio: 16/9;
+        
+        border-radius: 15px; 
+        transition: transform 0.3s ease;
     }
 
 
@@ -619,6 +629,17 @@ form.formulär input[type="submit"]:focus{
 @media screen and (min-width: 771px){
     .navbarMobile{
         display:none
+    }
+
+    /* Ändra underrubriker */
+    h3{
+        font-size: 30px;
+        
+    }
+
+    /* Ändra brödtext */
+    p {
+        font-size: 20px; 
     }
 
 }

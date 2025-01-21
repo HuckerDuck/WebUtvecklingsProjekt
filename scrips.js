@@ -3,9 +3,13 @@
 const hamburger = document.getElementById("hamburger");
 const navsmall = document.getElementById("navbarMobileList");
 
+// Öppnas vid klick
 hamburger.addEventListener("click", () => {
     navbarMobileList.classList.toggle("active");
+
 });
+
+
 
 //2 - Filtering av kategorier
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Alla artiklarna i listan
     const articles = document.querySelectorAll(".article"); 
 
-    // 
+    
     filterDropdown.addEventListener("change", () => {
         const selectedCategory = filterDropdown.value.toLowerCase(); 
 
