@@ -155,7 +155,7 @@ main {
 
 .hero {
     
-    background-image: url(../images/hero.jpg);
+    background-image: url(images/hero.jpg);
     width: 100%;
     min-height: calc(100vh - 100px);
     background-size: cover;
